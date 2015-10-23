@@ -760,7 +760,8 @@ public abstract class AbstractFlashcardViewer extends NavigationDrawerActivity {
             // These functions are definde in the JavaScript file assets/scripts/card.js. We get the text back in
             // shouldOverrideUrlLoading() in createWebView() in this file.
             sb.append("<center>\n<input type=text name=typed id=typeans onfocus=\"taFocus();\" " +
-                      "onblur=\"taBlur(this);\" onKeyPress=\"return taKey(this, event)\" autocomplete=\"off\" ");
+                      "onblur=\"taBlur(this);\" onKeyPress=\"return taKey(this, event)\"  " +
+                      "autocorrect=\"off\" spellcheck=\"false\" autocomplete=\"off\" autocapitalize=\"off\" ");
             // We have to watch out. For the preview we don’t know the font or font size. Skip those there. (Anki
             // desktop just doesn’t show the input tag there. Do it with standard values here instead.)
             if (mTypeFont != null && !TextUtils.isEmpty(mTypeFont) && mTypeSize > 0) {
